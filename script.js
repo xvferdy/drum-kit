@@ -2,35 +2,35 @@ function makeSound(key) {
 
     switch (key) {
         case "v":
-            var snare = new Audio("sounds/Snare 5.wav");
+            var snare = new Audio("sounds/Snare 5.mp3");
             snare.play();
             break;
         case "b":
-            var kick = new Audio("sounds/Kick 4.wav");
+            var kick = new Audio("sounds/Kick 4.mp3");
             kick.play();
             break;
         case "n":
-            var bass = new Audio("sounds/Bass 6 (C).wav");
+            var bass = new Audio("sounds/Bass 6 (C).mp3");
             bass.play();
             break;
         case "m":
-            var i808 = new Audio("sounds/808 1 (C).wav");
+            var i808 = new Audio("sounds/808 1 (C).mp3");
             i808.play();
             break;
         case "j":
-            var chant = new Audio("sounds/Chant 5.wav");
+            var chant = new Audio("sounds/Chant 5.mp3");
             chant.play();
             break;
         case "k":
-            var fx = new Audio("sounds/FX 5.wav");
+            var fx = new Audio("sounds/FX 5.mp3");
             fx.play();
             break;
         case "l":
-            var perc = new Audio("sounds/Perc 3.wav");
+            var perc = new Audio("sounds/Perc 3.mp3");
             perc.play();
             break;
         case "u":
-            var hat = new Audio("sounds/Hat 16.wav");
+            var hat = new Audio("sounds/Hat 16.mp3");
             hat.play();
             break;
         case "i":
