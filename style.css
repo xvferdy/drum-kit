@@ -1,5 +1,5 @@
 body {
-    background-image: url("images/bg.jpg");
+    background-image: url("images/bg1.jpg");
     height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -8,32 +8,19 @@ body {
 }
 
 h1 {
-    color: orange
+    font-family: 'Metal Mania', cursive;
 }
 
-footer {
-    color: #DBEDF3;
-    font-family: sans-serif;
+button {
+    padding: 1rem .5rem;
+    width: 9rem;
+    font-family: 'Metal Mania', cursive;
 }
 
 kbd {
     display: block;
     font-size: 4rem;
-}
-
-.key {
-    border: .3rem solid rgb(177, 185, 105);
-    border-radius: .5rem;
-    margin: 1rem;
-    font-size: 1.5rem;
-    padding: 1rem .5rem;
-    transition: all .07s ease;
-    width: 10rem;
-    text-align: center;
-    color: white;
-    background: rgba(153, 96, 21, 0.733);
-    text-shadow: 0 0 .5rem black;
-
+    font-family: 'Metal Mania', cursive;
 }
 
 .keys {
@@ -41,17 +28,15 @@ kbd {
     margin-bottom: 15%;
     display: flex;
     flex: 1;
-
     /* min-height: 100vh; */
     align-items: center;
     justify-content: center;
 }
 
-.sound {
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    letter-spacing: .1rem;
-    /* color: #C0C0C0; */
+footer {
+    margin-top: 17%;
+    color: #DBEDF3;
+    font-family: 'Metal Mania', cursive;
 }
 
 .playing {

@@ -1,33 +1,49 @@
 function makeSound(key) {
 
     switch (key) {
-        case "w": //w
-            var tom1 = new Audio("sounds/tom-1.mp3");
-            tom1.play();
-            break;
-        case "a":
-            var tom2 = new Audio("sounds/tom-2.mp3");
-            tom2.play();
-            break;
-        case "s":
-            var tom3 = new Audio("sounds/tom-3.mp3");
-            tom3.play();
-            break;
-        case "d":
-            var tom4 = new Audio("sounds/tom-4.mp3");
-            tom4.play();
-            break;
-        case "j":
-            var snare = new Audio("sounds/snare.mp3");
+        case "v":
+            var snare = new Audio("sounds/Snare 5.wav");
             snare.play();
             break;
+        case "b":
+            var kick = new Audio("sounds/Kick 4.wav");
+            kick.play();
+            break;
+        case "n":
+            var bass = new Audio("sounds/Bass 6 (C).wav");
+            bass.play();
+            break;
+        case "m":
+            var i808 = new Audio("sounds/808 1 (C).wav");
+            i808.play();
+            break;
+        case "j":
+            var chant = new Audio("sounds/Chant 5.wav");
+            chant.play();
+            break;
         case "k":
-            var crash = new Audio("sounds/crash.mp3");
-            crash.play();
+            var fx = new Audio("sounds/FX 5.wav");
+            fx.play();
             break;
         case "l":
-            var kick = new Audio("sounds/kick-bass.mp3");
-            kick.play();
+            var perc = new Audio("sounds/Perc 3.wav");
+            perc.play();
+            break;
+        case "u":
+            var hat = new Audio("sounds/Hat 16.wav");
+            hat.play();
+            break;
+        case "i":
+            var clap = new Audio("sounds/Clap 14.wav");
+            clap.play();
+            break;
+        case "o":
+            var ride = new Audio("sounds/Ride.wav");
+            ride.play();
+            break;
+        case "p":
+            var open = new Audio("sounds/Open Hat 5.wav");
+            open.play();
             break;
 
         default:
@@ -36,22 +52,25 @@ function makeSound(key) {
 
 }
 
-//detecting what button gona button press
-var button = document.querySelectorAll(".key")[1];
-var buttonList = document.querySelectorAll(".key").length
-//run event "click" on button
+//make var
+var button = document.querySelectorAll("button");
+var buttonList = document.querySelectorAll("button").length
 
-button.addEventListener("click", function () {
-    var buttonInnerHTML = this.innerHTML;
-    makeSound(buttonInnerHTML);
-    buttonAnimation()
+//run event "click" on mouse
+for (i = 0; i < buttonList; i++) {
+    button[i].addEventListener("click", function () {
+        var buttonClass = this.className;
+        makeSound(buttonClass);
+        buttonAnimation(buttonClass);
+    });
+}
 
-});
 
 //untuk animasi flash
-function buttonAnimation() {
-    button.classList.add('playing');
+function buttonAnimation(event) {
+    var activeButton = document.querySelector("." + event);
+    activeButton.classList.add('playing');
     setTimeout(function () {
-        button.classList.remove("playing");
+        activeButton.classList.remove('playing');
     }, 100);
 }
